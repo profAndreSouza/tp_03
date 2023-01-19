@@ -1,0 +1,27 @@
+{
+  "name": "tp_03",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/profAndreSouza/tp_03.git",
+  "author": "profAndreSouza <121942709+profAndreSouza@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec ts-node ./src/index.ts",
+    "migration:gen": "typeorm-ts-node-commonjs -d ./src/dataSource.ts migration:generate ./src/migration/default",
+    "migration:run": "typeorm-ts-node-commonjs -d ./src/dataSource.ts migration:run"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.18",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^3.0.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.11"
+  }
+}
