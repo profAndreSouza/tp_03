@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+<body>
+    <% if (courses.length > 0) { %>
+        <h1>Cursos</h1>
+        <ul>
+            <% for (var i=0; i<courses.length; i++) { %>
+                <li><%= courses[i].name %></li>
+            <% } %>
+        </ul>
+    <% } %>
+</body>
+</html>

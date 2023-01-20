@@ -5,9 +5,9 @@ import routes from "./routes"
 AppDataSource.initialize().then(() => {
     const app = express()
 
-    app.set('views', './view')
-    app.set('view engine', 'html');
-    
+    app.set('views', './src/view')
+    app.set('view engine', 'ejs');
+
     app.use(express.json())
     app.use(routes)
 

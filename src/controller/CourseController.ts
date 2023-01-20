@@ -32,7 +32,8 @@ export class CourseController {
         
         try {
             const courses = await CourseRepository.find()
-            res.status(201).json(courses)
+            
+            res.render('course', {courses: courses});
 
         } catch (error) {
             console.log(error)
