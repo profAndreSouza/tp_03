@@ -1,4 +1,5 @@
-import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "typeorm"
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm"
+import { Class } from "./Class"
 import { Discipline } from "./Discipline"
 
 @Entity('courses')
@@ -17,4 +18,8 @@ export class Course {
 
     @OneToMany(() => Discipline, (discipline) => discipline.course)
     disciplines: Discipline[]
+
+    @OneToMany(() => Class, (classe) => classe.course)
+    classes: Class[]
+    
 }
